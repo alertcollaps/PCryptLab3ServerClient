@@ -47,7 +47,7 @@ public class AKE2eg {
                 e.printStackTrace();
             }
             logBuffer.append(preString + prePreString+ "Send to Server: signU - " + Utils.bytesToHex(signU) + ", \\\nCert - {id}:"
-                    + cert.getId() + "\t {pub key}" + Utils.bytesToHex(cert.getKey().getEncoded()) + "\n" + "u: " + Utils.bytesToHex(keyPairDH.getPublic().getEncoded()));
+                    + cert.getId() + "\t {pub key}" + Utils.bytesToHex(cert.getKey().getEncoded()) + "\n" + "u: " + Utils.bytesToHex(keyPairDH.getPublic().getEncoded()) +  "\n");
 
             AKE2EgResponse ake2EgResponse = Server.getCert(keyPairDH.getPublic(), signU, cert);
             if (ake2EgResponse == null){
